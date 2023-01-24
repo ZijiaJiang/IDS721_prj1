@@ -1,6 +1,13 @@
-# rust-new-project-template
-A good starting point for a new Rust project
+# IDS 721 - Project #1 - Most Related Names
 
-## References
+## Description
+When we search for something on the internet, after the result appears, some related content might also show up below the page. This is based on the huge data collected from people's browsing history. Specifically, this project will focus on the name search. 
 
-* [rust-cli-template](https://github.com/kbknapp/rust-cli-template)
+This project is to give the most related names of a certain person. This person's name will be read from the user input in command line. 
+
+## Language
+Rust
+
+## Project flow
+* Week 1: set up basic structure, make this project runnable
+* Week 2: add the command line structure, make it successfully read user input
