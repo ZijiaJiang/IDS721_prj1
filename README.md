@@ -16,3 +16,4 @@ Rust
 ## Project flow
 * Week 1: set up basic structure, make this project runnable
 * Week 2: add the command line structure, make it successfully read user input
+* Week 3: Connect the data source with this project
