@@ -7,6 +7,7 @@ This project is to give the most related names of a certain person. This person'
 
 ## Developer Guide
 Build the project: `make format` and `make lint`
+
 Run the project: `cargo run -- search --name "input the name here"`
 
 ## Language
