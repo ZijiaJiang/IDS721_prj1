@@ -5,6 +5,10 @@ When we search for something on the internet, after the result appears, some rel
 
 This project is to give the most related names of a certain person. This person's name will be read from the user input in command line. 
 
+## Developer Guide
+Build the project: `make format` and `make lint`
+Run the project: `cargo run -- search --name "input the name here"`
+
 ## Language
 Rust
 
