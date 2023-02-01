@@ -4,7 +4,7 @@ use clap::Parser;
 #[clap(
     version = "1.0",
     author = "Zijia Jiang",
-    about = "Search for the most related name."
+    about = "Print dataset properties"
 )]
 struct Cli {
     #[clap(subcommand)]
@@ -14,25 +14,22 @@ struct Cli {
 #[derive(Parser)]
 enum Commands {
     #[clap(version = "1.0", author = "Zijia Jiang")]
-    Search {
+    Analyze {
         #[clap(short, long)]
-        name: String,
+        file: String,
     },
 }
 
 fn main() {
     let args = Cli::parse();
-    // parse the command line arguments as the parameters of the function
+    // parse the command line arguments as the parameter of the function
     match args.command {
-        Some(Commands::Search { name }) => {
-            let result = prj1::search_name(name);
-            println!(
-                "The person who is most related with the name you search is {}",
-                result
-            );
+        Some(Commands::Analyze { file }) => {
+            let contents = prj1::read_file(&file);
+            println!("The dataset has the following properties: \n{}", contents);
         }
         None => {
-            println!("Please input the name you want to search.");
+            println!("No command given");
         }
     }
 }
