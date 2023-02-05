@@ -25,8 +25,13 @@ fn main() {
     // parse the command line arguments as the parameter of the function
     match args.command {
         Some(Commands::Analyze { file }) => {
-            let contents = prj1::read_file(&file);
-            println!("The dataset has the following properties: \n{}", contents);
+            let columns = prj1::read_csv(&file);
+            println!(
+                "There are {} features in this dataset.\nThe information are as follows:",
+                columns.len()
+            );
+            prj1::print_vec_str(columns);
+            println!("Please use the information as an reference to choose the dataset that best matches your needs.")
         }
         None => {
             println!("No command given");
